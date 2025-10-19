@@ -1,0 +1,69 @@
+# --- Python / Flask ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist-info/
+.eggs/
+.build/
+.coverage*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.cache/
+
+# Virtual env (uv/venv/conda/pyenv)
+.venv/
+venv/
+env/
+.envrc
+.python-version
+
+# Flask / instance / DB dev
+instance/
+app.db
+# Alembic migrations: KEEP (jangan di-ignore)
+# migrations/
+
+# --- Config / Secrets ---
+# Jangan pernah commit secrets
+*.pem
+*.key
+*.crt
+.env
+.env.*
+!.env.example      # biarkan example ikut ke repo
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors ---
+.vscode/
+.idea/
+*.iml
+
+# --- Logs ---
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Docker ---
+# biarkan Dockerfile & compose ke-commit
+# ignore local volumes / artifacts kalau ada
+docker-data/
+.tmp/
+
+# --- Node/Vue (kalau nanti ada frontend/) ---
+node_modules/
+dist/
+build/
+
+# --- Others (optional) ---
+coverage/
