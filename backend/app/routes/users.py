@@ -8,6 +8,7 @@ from ..services.user_service import(
     update_user,
     delete_user
 )
+from flask_cors import CORS
 
 @users_bp.post("/users/register")
 def register():
