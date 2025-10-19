@@ -35,7 +35,6 @@ app.db
 *.crt
 .env
 .env.*
-!.env.example      # biarkan example ikut ke repo
 
 # --- OS junk ---
 .DS_Store
