@@ -12,6 +12,12 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
+  server: {
+    host: true,
+    strictPort: true,
+    watch: { usePolling: true, interval: 150 },
+    hmr: { clientPort: 5173 } 
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

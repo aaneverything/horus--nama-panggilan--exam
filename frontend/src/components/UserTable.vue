@@ -14,7 +14,7 @@
         <tr v-for="u in users" :key="u.id" class="odd:bg-white even:bg-gray-50">
           <td class="px-3 py-2 border">{{ u.id }}</td>
           <td class="px-3 py-2 border">{{ u.username }}</td>
-          <td class="px-3 py-2 border">{{ u.name }}</td>
+          <td class="px-3 py-2 border">{{ u.nama }}</td>
           <td class="px-3 py-2 border">{{ u.email }}</td>
           <td class="px-3 py-2 border">
             <button class="px-2 py-1 border rounded mr-2" @click="$emit('update', u)">U</button>
