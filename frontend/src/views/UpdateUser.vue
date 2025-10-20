@@ -6,7 +6,7 @@
       <div>
         <label class="block mb-1">Nama Lengkap</label>
         <input
-          v-model.trim="form.name"
+          v-model.trim="form.nama"
           type="text"
           class="w-full border rounded px-3 py-2"
           required
@@ -53,7 +53,7 @@ const route = useRoute()
 const router = useRouter()
 const id = route.params.id
 
-const form = reactive({ name: '', email: '', username: '' })
+const form = reactive({ nama: '', email: '', username: '' })
 const loading = ref(false)
 const error = ref('')
 const success = ref('')
@@ -61,24 +61,15 @@ const success = ref('')
 const preload = async () => {
   error.value = ''
   try {
-    // prefer data dari navigation state agar snappy
-    const stateUser = history.state?.user
-    if (stateUser && stateUser.id == id) {
-      Object.assign(form, {
-        name: stateUser.name || '',
-        email: stateUser.email || '',
-        username: stateUser.username || '',
-      })
-      return
-    }
     const { data } = await UsersAPI.get(id)
     Object.assign(form, {
-      name: data.name || '',
-      email: data.email || '',
-      username: data.username || '',
+      nama: data?.nama ?? '',
+      email: data?.email ?? '',
+      username: data?.username ?? '',
     })
-  } catch (e) {
-    error.value = e.message || 'Gagal memuat data user'
+  } catch (err) {
+    console.error('preload error:', err)
+    error.value = err?.message || 'Gagal memuat data user'
   }
 }
 
