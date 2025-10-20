@@ -1,7 +1,6 @@
 <template>
   <div class="max-w-md mx-auto bg-white border rounded p-6 shadow-sm">
-    <h2 class="text-xl font-semibold text-center mb-4">REGISTRASI AKUN</h2>
-
+    <h2 class="text-xl font-semibold text-center mb-4">REGISTRASI</h2>
     <form @submit.prevent="onSubmit" class="space-y-3">
       <div>
         <label class="block mb-1">Nama Lengkap</label>

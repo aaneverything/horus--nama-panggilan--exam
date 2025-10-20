@@ -1,38 +1,43 @@
-# .
+# Exam Frontend (Vue 3 + Vite)
 
-This template should help get you started developing with Vue 3 in Vite.
+A user management single-page application (SPA) built with Vue 3 and Vite. This app provides for managing users listing, creating, editing, and deleting user accounts, and searching or filtering users. It communicates with a backend API for data and authentication.
 
-## Recommended IDE Setup
+## What is this app?
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This is a frontend single-page application (SPA) scaffold — not a backend. It is intended to serve as the client-side UI for a web application and is built for fast development and iteration. Key characteristics:
 
-## Recommended Browser Setup
+- Built with Vue 3 and Vite for fast hot-reload development.
+- Client-side routing with `vue-router`, and global state management with `pinia`.
+- Uses `axios` for HTTP communication with an external API (backend).
+- Tailwind CSS is included as a utility-first styling tool.
+- Typical use cases: admin dashboard, CRUD interfaces, user portals, and other interactive web apps that rely on a separate API.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Quick start
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Run the dev server:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Tech stack (high level)
 
-```sh
-npm run build
-```
+- Vue 3
+- Vite
+- Vue Router
+- Pinia
+- Axios
+- Tailwind CSS
+- Prettier
+
+## Notes
+
+- Configure API base URL and other client-visible variables using Vite env variables (prefix with `VITE_`).
+- The built app outputs static files (usually to `dist/`) and can be deployed to static hosts (Netlify, Vercel, S3/CloudFront, etc.).
+- This README focuses on what the app is and how to get started — extend it with project-specific details (routes, stores, components) as the application grows.
